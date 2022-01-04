@@ -12,21 +12,5 @@ services:
     ports:
       - 5000:5000
     command: npm run start
-    depends_on:
-      - postgres
-    restart: always
-  postgres:
-    container_name: postgres
-    image: postgres:latest
-    env_file:
-      - .env.dev
-    environment:
-      PG_DATA: /var/lib/postgresql/data
-    ports:
-      - 5433:5433
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-    restart: always
 
-volumes:
-  pgdata:
+    restart: always
