@@ -3,3 +3,4 @@
 node_modules/
 .idea/
 docker-compose.dev.yml
+Dockerfile.dev
