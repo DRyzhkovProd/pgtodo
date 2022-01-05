@@ -5,6 +5,7 @@ services:
     container_name: server
     build:
       context: ./server
+      dockerfile: Dockerfile
     env_file:
       - .env
     volumes:
