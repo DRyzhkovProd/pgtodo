@@ -6,11 +6,10 @@ services:
     build:
       context: ./server
     env_file:
-      - .env.dev
+      - .env
     volumes:
       - .:/server
     ports:
       - 5000:5000
     command: npm run start
-
     restart: always
