@@ -2,15 +2,16 @@ version: '3.0'
 
 services:
   server:
-    container_name: server
+    container_name: dev-server
     build:
       context: ./server
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     env_file:
-      - .env
+      - .env.dev
     volumes:
       - .:/server
     ports:
-      - 3000:3000
-    command: npm run start:prod
+      - 5000:5000
+    command: npm run dev
+
     restart: always
