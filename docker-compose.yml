@@ -11,5 +11,5 @@ services:
       - .:/server
     ports:
       - 5000:5000
-    command: npm run start
+    command: npm run start:prod
     restart: always
